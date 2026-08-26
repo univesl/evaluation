@@ -1,0 +1,66 @@
+# Local credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python/editor/OS state
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private local data and database tooling. These paths may contain student PII,
+# full conversations, source code, internal hosts, or database credentials.
+/retrieved_data/
+/evaluate/
+/需求.md
+
+# Temporary render, extraction, and download workspaces
+/tmp/
+/.tmp*/
+
+# Keep the repository research bundle curated rather than mirroring the local
+# literature cache and raw search workspace.
+/research/*
+!/research/state.json
+!/research/decision-log.md
+!/research/round4_ai_assisted_pkt_landing/
+/research/round4_ai_assisted_pkt_landing/*
+!/research/round4_ai_assisted_pkt_landing/研究计划落地完善与数据集评估_2026-08-24.md
+!/research/round4_ai_assisted_pkt_landing/dataset-evaluation-matrix.csv
+!/research/round4_ai_assisted_pkt_landing/local-data-audit-2026-08-24.md
+!/research/round4_ai_assisted_pkt_landing/search-plan-2026-08-24.md
+
+# Publish only reviewed deliverables from output/.
+/output/*
+!/output/documents/
+/output/documents/*
+!/output/documents/研究计划落地完善与数据集评估_2026-08-24.docx
+
+# Local experiment payloads: summaries/configs/notes are tracked, bulky payloads are not.
+/experiments/runs/
+/experiments/checkpoints/
+/experiments/artifacts/
+/experiments/results/**/*.pt
+/experiments/results/**/*.pth
+/experiments/results/**/*.ckpt
+/experiments/results/**/*.bin
+/experiments/results/**/*.npy
+/experiments/results/**/*.npz
+/experiments/results/**/*.parquet
+/wandb/
+/mlruns/
+
+# Office lock/backup files
+~$*.docx
+*.tmp
+*.bak

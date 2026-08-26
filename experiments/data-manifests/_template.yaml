@@ -1,0 +1,17 @@
+schema_version: 1
+dataset_id: DATASET-ID
+display_name: ""
+access: public-or-approved-private
+license_or_approval: ""
+retrieved_at: ""
+sha256: ""
+schema_version_id: ""
+row_count: null
+learner_count: null
+task_count: null
+time_range: ""
+filters: []
+split_manifest_sha256: ""
+contains_pii: false
+local_path_env: DATASET_ROOT
+notes: "Do not add raw records, credentials, usernames, or machine-specific absolute paths."

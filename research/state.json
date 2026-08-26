@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-07-12T02:57:10+08:00",
+  "updated_at": "2026-08-26T00:00:00+08:00",
+  "project_root": ".",
+  "stage": "shortlist",
+  "decision_state": "shortlist",
+  "last_search_at": "2026-08-24T02:40:00+08:00",
+  "paper_count": 3096,
+  "note_count": 47,
+  "current_shortlist": [
+    "Primary: incremental predictive validity of AI-mediated learner evidence beyond problem, KC, code, correctness and tests",
+    "Prospective extension: RECAP-style provenance study of adoption, modification and verification behaviors"
+  ],
+  "open_questions": [
+    "Can local task, message and code-state provenance be repaired with auditable keys and acceptable linkage coverage?",
+    "Which later outcome is sufficiently independent of AI access and current-task correctness: next task, hidden test, exam item or prospective no-AI verification task?",
+    "Can StudyChat and TutorTrace be harmonized at an episode level without erasing their different temporal grains?",
+    "Is the incremental value of AI interaction stable across transparent, DKT/AKT and code-aware backbones after strict learner/time/task splits?",
+    "Can a small prospective cohort log AI suggestion-to-code adoption and verification while meeting consent, privacy and power requirements?"
+  ]
+}

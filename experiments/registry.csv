@@ -1,0 +1,3 @@
+experiment_id,type,status,title,objective,config_path,data_manifest_path,result_path,notes_path,code_commit,started_at,finished_at
+E20260826-001-local-linkage-audit,data_audit,planned,Local episode linkage audit,Determine whether learner task message and code-state provenance can support leakage-safe episodes,,,,,,,
+E20260826-002-public-pkt-baseline,baseline,planned,CodeWorkout and TIKTOC baseline,Reproduce transparent DKT AKT and test-aware baselines under frozen splits,,,,,,,

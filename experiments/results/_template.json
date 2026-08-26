@@ -1,0 +1,17 @@
+{
+  "schema_version": "1",
+  "experiment_id": "EYYYYMMDD-NNN-short-name",
+  "status": "completed",
+  "code_commit": "",
+  "data_manifest": "",
+  "primary_metrics": {},
+  "secondary_metrics": {},
+  "sample_counts": {
+    "learners": null,
+    "tasks": null,
+    "events": null
+  },
+  "uncertainty": {},
+  "external_artifacts": [],
+  "completed_at": ""
+}

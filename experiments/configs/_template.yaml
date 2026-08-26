@@ -1,0 +1,25 @@
+schema_version: 1
+experiment_id: EYYYYMMDD-NNN-short-name
+status: planned
+objective: ""
+hypothesis: ""
+code_commit: ""
+data_manifest: experiments/data-manifests/DATASET-ID.yaml
+seed: 0
+split:
+  unit: learner
+  strategy: ""
+features:
+  tier: ""
+model:
+  name: ""
+  parameters: {}
+metrics:
+  primary: []
+  secondary: []
+resources:
+  device: ""
+  time_budget_hours: null
+outputs:
+  result: experiments/results/EYYYYMMDD-NNN-short-name.json
+  notes: experiments/notes/EYYYYMMDD-NNN-short-name.md
