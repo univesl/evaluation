@@ -1,0 +1,18 @@
+{
+  "milestone_id": "M20260907-001-direction-review",
+  "status": "completed",
+  "completed_at": "2026-09-07T00:44:18+08:00",
+  "baseline_commit": "a23f0b8",
+  "reproducible_model_benchmark": false,
+  "model_experiments_run": 0,
+  "private_data_accessed": false,
+  "atomic_claim_count": 12,
+  "shortlisted_directions": 3,
+  "decision": "prioritize StudyChat access and independent-outcome linkage audit before architecture",
+  "report_path": "research/round4_ai_assisted_pkt_landing/方向评估与首轮验证建议_2026-09-07.md",
+  "manifest_path": "experiments/data-manifests/public-source-review-20260907.json",
+  "validation": {
+    "research_workspace_errors": 0,
+    "research_workspace_warnings": 0
+  }
+}

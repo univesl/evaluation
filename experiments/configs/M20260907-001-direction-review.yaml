@@ -1,0 +1,12 @@
+milestone_id: M20260907-001-direction-review
+type: literature_and_dataset_review
+status_at_freeze: planned
+date: '2026-09-07'
+baseline_commit: a23f0b8
+scope: original proposal and round4 refresh; closest work and public metadata only
+model_training: false
+private_database_access: false
+student_level_data_processing: false
+resource_budget: bounded desk review; no paid model calls or training
+evaluation: verify claims against primary sources; assess access and construct separately
+output: research/round4_ai_assisted_pkt_landing/方向评估与首轮验证建议_2026-09-07.md

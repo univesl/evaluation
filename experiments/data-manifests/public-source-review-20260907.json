@@ -1,0 +1,31 @@
+{
+  "manifest_id": "public-source-review-20260907",
+  "kind": "public_metadata_and_literature_review_not_student_dataset",
+  "created_at": "2026-09-07T00:44:18+08:00",
+  "permission_scope": "public papers and documentation only; no acceptance of gated terms; no student rows downloaded",
+  "student_level_records": false,
+  "retention": "retain curated summaries in repository; local retrieval cache may be removed without affecting the conclusions",
+  "source_list": "research/round4_ai_assisted_pkt_landing/source-verification-2026-09-07.md",
+  "artifacts": [
+    {
+      "uri": "repo:///research/round4_ai_assisted_pkt_landing/方向评估与首轮验证建议_2026-09-07.md",
+      "sha256": "ee3cb7d8ba2dc2baff441cfb04ec035b1265265b1c012bfdc561d3461f02f823"
+    },
+    {
+      "uri": "repo:///research/round4_ai_assisted_pkt_landing/evidence-update-2026-09-07.csv",
+      "sha256": "2ab386be8e3e7907196430bbf220719e91747032c0bee1fbccb376a4efee5f02"
+    },
+    {
+      "uri": "repo:///research/round4_ai_assisted_pkt_landing/source-verification-2026-09-07.md",
+      "sha256": "b45e7bbcadc13747f8f3ffe0bdcb8b888385470885fd7d6200a07d06bffae1b7"
+    },
+    {
+      "uri": "repo:///research/round4_ai_assisted_pkt_landing/search-plan-2026-09-07.md",
+      "sha256": "805cffec8843d0d0cffc0288218266f89e467c1c741cccc4169f11e9345c5140"
+    },
+    {
+      "uri": "repo:///research/round4_ai_assisted_pkt_landing/dataset-evaluation-matrix.csv",
+      "sha256": "6e43c5e78da9f651ec0e07aa04af9b41012b9184fdfc5ce2bee9ef3b392a5339"
+    }
+  ]
+}

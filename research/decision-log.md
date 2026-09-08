@@ -154,3 +154,30 @@
 - Privacy boundary: student-level data, names/IDs, complete dialogues, submitted code, database exports, internal database tooling/configuration, credentials, full logs and large artifacts stay outside Git.
 - Experiment discipline: each meaningful run receives an ID, frozen config, data manifest, code commit, result summary and notes; only decision-changing summaries are promoted to `EXPERIMENT.md`.
 - Git policy: do not push automatically in future turns unless the user explicitly asks; this initialization request explicitly authorizes the initial synchronization.
+
+## 2026-09-07 — Public-data feasibility and novelty reappraisal
+
+- Decision state remains shortlist / E0; no model experiment has run.
+- StudyChat v4 §4.1 already compares prior performance plus AI counts and dialogue acts; SQKT already uses questions beyond historical code. A simple feature-addition novelty claim is insufficient.
+- Prefer independent-outcome incremental validity with strong available programming baselines, held-out learners/time and explicit label provenance. Retain behavior measurement and a prospective verification intervention as alternatives.
+- Change sequencing: AI data access, outcome independence and linkage are immediate gates; full TIKTOC/OKT reproduction is not a prerequisite for auditing them.
+- Correct StudyChat access to gated files and latest paper scope to 2,214 dialogues. Record TutorTrace website 664/eight versus paper v1 480/four separately; version relationship is unresolved.
+- Add the Bassner classroom assessment package as a public measurement reference; do not mislabel it as a dialogue-KT dataset. ProgFeed remains a feedback-process fallback with lab-specific assignment and delivery caveats.
+- Continuous grades require continuous-outcome metrics; a hidden test of AI-assisted code is not a learner's independent verification task. Non-significance alone does not establish zero incremental information.
+- Historical local aggregate counts do not establish a usable sample or adequate precision; no database export or private-data change was made.
+- Local profile was stale (round-3 explore); a dated current-scope preface now reconciles it with tracked round-4 shortlist state. Historical sections and decisions preserved.
+- Evidence and source-review milestone: M20260907-001-direction-review; report at round4_ai_assisted_pkt_landing/方向评估与首轮验证建议_2026-09-07.md. Research corpus/notes remain local caches; portable conclusions and source locators are curated in round4.
+- Coverage: bounded refresh with indexed-source rate limits and official full-text/metadata verification, not systematic-review saturation.
+- Revisit triggers: StudyChat access and learner/code/grade linkage; TutorTrace release manifest; independent outcome policy; baseline incremental confidence intervals.
+
+## 2026-09-09 — Discussion archive and renewed novelty exploration
+
+- Decision: explore / E0; user remains unconvinced about novelty and requests one to two days of reading before commitment.
+- Primary target: future AI-assisted programming competence under explicit tool conditions; unaided results auxiliary, not a universal dataset gate.
+- Retain longitudinal prediction, behavior validity and cross-tool assessment as hypotheses. No architecture or synthetic sample budget frozen.
+- Closest work includes SQKT, StudyChat, CoTutor, vibe coding proficiency and HAI-Eval. Synthetic student methods do not establish real learner validity.
+- TutorTrace uist partly clarifies event counts, not all sample discrepancies; license, scrub confirmation and out-of-scope individual profiling remain access/use gates.
+- Current archive and literature map dated 2026-09-09 supersede current-scope assumptions, preserving historical files and decisions.
+- User explicitly requests GitHub synchronization of shareable discussion/research artifacts. No private data or database access.
+- Artifact stage is synthesizing (schema allowed); decision_state is explore. Documentation milestone M20260909-001, no model completion claim.
+- Integrity correction: the prior manifest hashed a mutable matrix without a separately committed dated snapshot; its historical hash no longer resolves to current bytes. Old manifest retained, limitation recorded in M20260909-001 notes; current matrix frozen by the new manifest. Future mutable artifacts need dated snapshots.

@@ -1,0 +1,16 @@
+{
+  "milestone_id": "M20260909-001-discussion-literature-sync",
+  "type": "discussion_and_literature_review",
+  "status_at_freeze": "planned",
+  "date": "2026-09-09",
+  "baseline_commit": "a23f0b8",
+  "model_training": false,
+  "private_database_access": false,
+  "scope": "portable discussion summary and bounded nearest-work refresh",
+  "resource_budget": "desk review; no paid model calls; no student data",
+  "outputs": [
+    "search-plan-2026-09-09.md",
+    "讨论归档与跨设备接续_2026-09-09.md",
+    "文献地图与阅读决策_2026-09-09.md"
+  ]
+}

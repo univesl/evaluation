@@ -39,6 +39,10 @@ Thumbs.db
 !/research/round4_ai_assisted_pkt_landing/dataset-evaluation-matrix.csv
 !/research/round4_ai_assisted_pkt_landing/local-data-audit-2026-08-24.md
 !/research/round4_ai_assisted_pkt_landing/search-plan-2026-08-24.md
+!/research/round4_ai_assisted_pkt_landing/方向评估与首轮验证建议_2026-09-07.md
+!/research/round4_ai_assisted_pkt_landing/search-plan-2026-09-07.md
+!/research/round4_ai_assisted_pkt_landing/source-verification-2026-09-07.md
+!/research/round4_ai_assisted_pkt_landing/evidence-update-2026-09-07.csv
 
 # Publish only reviewed deliverables from output/.
 /output/*
@@ -64,3 +68,9 @@ Thumbs.db
 ~$*.docx
 *.tmp
 *.bak
+
+# Reviewed portable 2026-09-09 refresh
+!/research/round4_ai_assisted_pkt_landing/evidence-update-2026-09-09.csv
+!/research/round4_ai_assisted_pkt_landing/search-plan-2026-09-09.md
+!/research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md
+!/research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md
