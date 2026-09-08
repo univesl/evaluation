@@ -49,6 +49,7 @@ Thumbs.db
 !/output/documents/
 /output/documents/*
 !/output/documents/研究计划落地完善与数据集评估_2026-08-24.docx
+!/output/documents/README.md
 
 # Local experiment payloads: summaries/configs/notes are tracked, bulky payloads are not.
 /experiments/runs/

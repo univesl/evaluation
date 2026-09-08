@@ -11,10 +11,20 @@
 3. `experiments/registry.csv`
 4. `research/state.json`
 5. `research/decision-log.md` 的最新条目
-6. `research/round4_ai_assisted_pkt_landing/研究计划落地完善与数据集评估_2026-08-24.md`
-7. 同目录 `讨论归档与跨设备接续_2026-09-09.md` 和 `文献地图与阅读决策_2026-09-09.md`（当前定位）
+6. `research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md`
+7. `research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md`
+8. `research/round4_ai_assisted_pkt_landing/研究计划落地完善与数据集评估_2026-08-24.md`（历史方案，仅作追溯）
 
-随后检查 `git status --short --branch` 和最近提交。先用几句话复述当前阶段、阻塞项和拟执行工作；若状态文件与代码/产物冲突，以可验证文件为准并先修正状态记录。
+随后检查 `git status --short --branch` 和最近提交。先用几句话复述当前阶段、阻塞项和拟执行工作；若状态文件与代码/产物冲突，以 2026-09-09 当前文献地图、讨论归档和可验证产物为准，并先修正状态记录。
+
+### 当前权威层级
+
+1. 当前研究定位：2026-09-09 的讨论归档和文献地图。
+2. 当前实验状态：`EXPERIMENT.md`、`research/state.json`、`experiments/registry.csv`。
+3. 历史决策：`research/decision-log.md`，只追加，不回写历史。
+4. 历史方案：2026-08-24 落地稿和 2026-09-07 方向评估，仅用于追溯；与当前定位冲突时不执行其中的旧计划。
+
+这个层级是跨设备同步协议的一部分，不应随意改变。若研究定位更新，必须同时更新当前文献地图、讨论归档、`EXPERIMENT.md` 和 `research/state.json`，并在 decision log 追加一条 dated decision。
 
 ## 2. 项目目标与研究边界
 
@@ -30,10 +40,10 @@
 
 ## 3. 目录职责
 
-- `research/round4_ai_assisted_pkt_landing/`：当前研究方案与数据集评估的可共享权威版本。
+- `research/round4_ai_assisted_pkt_landing/`：当前定位、历史方案、数据集评估和证据更新；其中只有 2026-09-09 两份文档代表当前研究定位。
 - `research/state.json`：机器可读的研究阶段、候选方向和开放问题。
 - `research/decision-log.md`：追加式的重要研究决策；不要改写历史条目。
-- `output/documents/`：面向导师或合作者的审阅版文档。
+- `output/documents/`：面向导师或合作者的审阅版文档；旧版不自动代表当前方向。
 - `experiments/registry.csv`：所有重要实验和里程碑的索引。
 - `experiments/configs/`：冻结的实验配置；运行后不得就地改写。
 - `experiments/results/`：小型、结构化结果摘要，不保存完整日志或模型。
@@ -45,7 +55,7 @@
 
 ## 4. 当前环境与运行方式
 
-当前仓库尚无训练入口、统一环境锁文件或自动化测试套件。不要虚构训练命令。正式进入 E1 前，需要增加可复现环境声明、数据适配器、基线入口和测试。
+当前仓库尚无训练入口、统一环境锁文件或自动化测试套件。不要虚构训练命令。当前仍处于 E0 / explore / 最近邻阅读；正式进入 E1 前，需要增加可复现环境声明、数据适配器、基线入口和测试，并由当前研究状态明确放行。
 
 现有本地导出脚本使用 Python 与 PyMySQL，并依赖只在合规网络和授权设备上可用的数据库。数据库导出和验证不是普通的跨设备恢复步骤；运行前必须得到用户确认并检查本机环境变量。
 
@@ -82,7 +92,7 @@ git ls-files
 
 - Git 中只保存小型、可读、可比较的指标摘要和图表；完整日志、checkpoint、缓存和大型中间特征保存在 Git 外。
 - 外部产物在 notes 中记录逻辑 URI、生成时间、SHA-256 和保留策略，不记录含用户名的本地绝对路径。
-- 主指标优先使用 Log Loss、Brier score 和校准；同时报告 AUROC，类别不平衡时报告 AUPRC。
+- 指标必须匹配结果类型：二元/概率结果使用 Log Loss、Brier、AUROC、AUPRC 和校准；连续成绩使用 MAE、RMSE、留出 R²；不要把连续成绩强行转成概率指标。
 - 统计单位以学生为主，使用学生级 bootstrap 或层级方法；禁止把相邻提交随机拆到训练和测试。
 - 结果必须同时报告绝对性能、相对基线的增量、95% 区间，以及学生/题目/事件数。
 
@@ -105,8 +115,10 @@ git ls-files
 
 ## 9. Git 与跨设备同步
 
-- 开始工作前先拉取并查看状态；避免在两台设备上同时改同一个实验配置。
-- 提交应按“状态/文档”“代码”“单个实验结果”分开，提交信息写清实验 ID。
+- 开始工作前固定执行：`git status --short --branch` → `git pull --ff-only` → 按必读顺序恢复状态。若有未提交修改，先识别来源，不覆盖、不自动清理。
+- 修改当前研究定位时，先更新 2026-09-09 当前文档，再同步 `EXPERIMENT.md`、`research/state.json`、registry 和 decision log；不能只改其中一个状态文件。
+- 提交应按“状态/文档”“代码”“单个实验结果”分开，提交信息写清实验 ID 或里程碑 ID。
+- 只同步 Git 中已审查的可共享文件；`evaluate/`、`retrieved_data/`、`tmp/` 和完整日志永远不通过 Git 同步。
 - 未经用户明确要求，不执行 `git push`、强制推送、历史重写或删除远端分支。
-- 合并冲突时，registry 和 `EXPERIMENT.md` 需要语义合并，不能简单选择一侧覆盖。
+- 合并冲突时，registry、`EXPERIMENT.md`、`state.json` 和当前文献地图需要语义合并，不能简单选择一侧覆盖。
 - Git 不负责同步私有数据；另一台设备必须通过批准的安全渠道取得同一数据版本，并核对 manifest/hash。

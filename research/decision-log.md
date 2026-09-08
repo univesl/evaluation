@@ -181,3 +181,10 @@
 - User explicitly requests GitHub synchronization of shareable discussion/research artifacts. No private data or database access.
 - Artifact stage is synthesizing (schema allowed); decision_state is explore. Documentation milestone M20260909-001, no model completion claim.
 - Integrity correction: the prior manifest hashed a mutable matrix without a separately committed dated snapshot; its historical hash no longer resolves to current bytes. Old manifest retained, limitation recorded in M20260909-001 notes; current matrix frozen by the new manifest. Future mutable artifacts need dated snapshots.
+
+## 2026-09-09 — Current-state authority and archival boundary
+
+- Decision: the 2026-09-09 discussion archive and literature map are the only current research-position documents. The 2026-08-24 landing proposal and 2026-09-07 direction review remain as historical evidence, not active plans.
+- State correction: `research/state.json` now separates `stage: explore` from `experiment_stage: E0`; no model experiment is running or completed.
+- Registry correction: local linkage audit is the next candidate gate; CodeWorkout/TIKTOC baseline is deferred until the reading/novelty gate or a specific falsifiable comparison requires it.
+- Synchronization rule: changes to research positioning must update the current archive/map, `EXPERIMENT.md`, `state.json`, registry and this log together. Git never carries private data; cross-device recovery starts with `git pull --ff-only` and the fixed AGENTS reading order.

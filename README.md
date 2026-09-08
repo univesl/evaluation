@@ -4,13 +4,13 @@
 
 当前为 **E0 / explore**，无运行模型实验、无性能结果。旧计划保留追溯。
 
-最新入口：[讨论归档与跨设备接续](research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md)；[文献地图与阅读安排](research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md)。恢复时读取 AGENTS.md、EXPERIMENT.md 和最新决策。
+当前唯一研究入口：[讨论归档与跨设备接续](research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md)；[文献地图与阅读决策](research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md)。2026-08-24 落地稿和 2026-09-07 方向评估保留为历史追溯，不代表当前研究定位。
 
 ## 仓库中包含什么
 
 - `面向 AI 辅助编程的学习者能力观测与动态追踪研究.pdf`：原始研究计划。
 - `output/documents/`：经过排版校验的研究建议 Word 文档。
-- `research/round4_ai_assisted_pkt_landing/`：可编辑建议、数据集决策矩阵、本地数据聚合审计和检索计划。
+- `research/round4_ai_assisted_pkt_landing/`：当前定位、历史方案、数据集决策矩阵、本地数据聚合审计和检索计划。
 - `research/state.json`、`research/decision-log.md`：研究方向状态和重要决策历史。
 - `experiments/`：实验登记表、配置/结果/笔记模板及后续实验摘要。
 
@@ -26,7 +26,7 @@ cd evaluation
 git status --short --branch
 ```
 
-然后让新的 Codex 会话先读取 `AGENTS.md`、`EXPERIMENT.md`、`experiments/registry.csv`、`research/state.json` 和最新研究建议，再汇报当前阶段与下一步，不要直接运行实验。
+然后让新的 Codex 会话先读取 `AGENTS.md`、`EXPERIMENT.md`、`experiments/registry.csv`、`research/state.json`、2026-09-09 讨论归档和文献地图，再汇报当前阶段与下一步，不要直接运行实验。
 
 ## 重要提醒
 
