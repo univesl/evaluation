@@ -11,20 +11,20 @@
 3. `experiments/registry.csv`
 4. `research/state.json`
 5. `research/decision-log.md` 的最新条目
-6. `research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md`
-7. `research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md`
+6. `research/state.json` 中 `current_authority` 和 `current_archive` 指向的当前讨论归档
+7. `research/state.json` 中 `current_review` 指向的当前文献地图
 8. `research/round4_ai_assisted_pkt_landing/研究计划落地完善与数据集评估_2026-08-24.md`（历史方案，仅作追溯）
 
 随后检查 `git status --short --branch` 和最近提交。先用几句话复述当前阶段、阻塞项和拟执行工作；若状态文件与代码/产物冲突，以 2026-09-09 当前文献地图、讨论归档和可验证产物为准，并先修正状态记录。
 
 ### 当前权威层级
 
-1. 当前研究定位：2026-09-09 的讨论归档和文献地图。
+1. 当前研究定位：由 `research/state.json` 的 `current_archive`、`current_review` 和 `current_authority` 指向的日期版本文档。
 2. 当前实验状态：`EXPERIMENT.md`、`research/state.json`、`experiments/registry.csv`。
 3. 历史决策：`research/decision-log.md`，只追加，不回写历史。
 4. 历史方案：2026-08-24 落地稿和 2026-09-07 方向评估，仅用于追溯；与当前定位冲突时不执行其中的旧计划。
 
-这个层级是跨设备同步协议的一部分，不应随意改变。若研究定位更新，必须同时更新当前文献地图、讨论归档、`EXPERIMENT.md` 和 `research/state.json`，并在 decision log 追加一条 dated decision。
+这个层级是跨设备同步协议的一部分，不应随意改变。若研究定位更新，必须创建新的日期版本文档，更新 `state.json` 的当前入口及相关索引，同时更新 `EXPERIMENT.md`，并在 decision log 追加一条 dated decision。已经被 manifest 引用的旧日期文件不得直接修改。
 
 ## 2. 项目目标与研究边界
 
@@ -40,7 +40,7 @@
 
 ## 3. 目录职责
 
-- `research/round4_ai_assisted_pkt_landing/`：当前定位、历史方案、数据集评估和证据更新；其中只有 2026-09-09 两份文档代表当前研究定位。
+- `research/round4_ai_assisted_pkt_landing/`：当前定位、历史方案、数据集评估和证据更新；当前文件由 `state.json` 指定，日期不是永久写死的入口。
 - `research/state.json`：机器可读的研究阶段、候选方向和开放问题。
 - `research/decision-log.md`：追加式的重要研究决策；不要改写历史条目。
 - `output/documents/`：面向导师或合作者的审阅版文档；旧版不自动代表当前方向。
@@ -116,7 +116,7 @@ git ls-files
 ## 9. Git 与跨设备同步
 
 - 开始工作前固定执行：`git status --short --branch` → `git pull --ff-only` → 按必读顺序恢复状态。若有未提交修改，先识别来源，不覆盖、不自动清理。
-- 修改当前研究定位时，先更新 2026-09-09 当前文档，再同步 `EXPERIMENT.md`、`research/state.json`、registry 和 decision log；不能只改其中一个状态文件。
+- 修改当前研究定位时，创建新的日期文档，不直接修改旧日期快照；然后同步 `EXPERIMENT.md`、`research/state.json`、registry 和 decision log，不能只改其中一个状态文件。
 - 提交应按“状态/文档”“代码”“单个实验结果”分开，提交信息写清实验 ID 或里程碑 ID。
 - 只同步 Git 中已审查的可共享文件；`evaluate/`、`retrieved_data/`、`tmp/` 和完整日志永远不通过 Git 同步。
 - 未经用户明确要求，不执行 `git push`、强制推送、历史重写或删除远端分支。

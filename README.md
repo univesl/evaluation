@@ -4,7 +4,7 @@
 
 当前为 **E0 / explore**，无运行模型实验、无性能结果。旧计划保留追溯。
 
-当前唯一研究入口：[讨论归档与跨设备接续](research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md)；[文献地图与阅读决策](research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md)。2026-08-24 落地稿和 2026-09-07 方向评估保留为历史追溯，不代表当前研究定位。
+当前研究入口由 `research/state.json` 的 `current_archive`、`current_review` 和 `current_authority` 指定。日期文档是不可变快照；2026-08-24 落地稿和 2026-09-07 方向评估保留为历史追溯，不代表当前研究定位。新定位必须创建新的日期文档并更新 state 索引。
 
 ## 仓库中包含什么
 
@@ -26,7 +26,7 @@ cd evaluation
 git status --short --branch
 ```
 
-然后让新的 Codex 会话先读取 `AGENTS.md`、`EXPERIMENT.md`、`experiments/registry.csv`、`research/state.json`、2026-09-09 讨论归档和文献地图，再汇报当前阶段与下一步，不要直接运行实验。
+然后让新的 Codex 会话先读取 `AGENTS.md`、`EXPERIMENT.md`、`experiments/registry.csv`、`research/state.json`，再读取 state 当前入口指向的日期文档并汇报当前阶段与下一步，不要直接运行实验。
 
 ## 重要提醒
 

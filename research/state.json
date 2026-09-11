@@ -3,7 +3,7 @@
   "created_at": "2026-07-12T02:57:10+08:00",
   "updated_at": "2026-09-09T00:57:06+08:00",
   "project_root": ".",
-  "stage": "explore",
+  "stage": "synthesizing",
   "experiment_stage": "E0",
   "decision_state": "explore",
   "last_search_at": "2026-09-09T00:57:06+08:00",
@@ -21,6 +21,7 @@
     "Are TutorTrace license and permitted uses sufficient?",
     "Does synthetic-data evidence transfer to held-out real students?"
   ],
+  "current_archive": "research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md",
   "current_review": "research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md",
   "current_authority": [
     "research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md",

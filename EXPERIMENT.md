@@ -1,6 +1,6 @@
 # 当前实验状态
 
-最后更新：2026-09-09（Asia/Shanghai）
+最后更新：2026-09-11（Asia/Shanghai）
 
 当前研究阶段：**explore**
 
@@ -22,11 +22,13 @@
 
 发生冲突时按以下顺序解释：
 
-1. `research/round4_ai_assisted_pkt_landing/讨论归档与跨设备接续_2026-09-09.md`
-2. `research/round4_ai_assisted_pkt_landing/文献地图与阅读决策_2026-09-09.md`
+1. `research/state.json` 中 `current_archive` 和 `current_authority` 指向的当前讨论归档
+2. `research/state.json` 中 `current_review` 指向的当前文献地图
 3. 本文件、`research/state.json`、`experiments/registry.csv`
 4. `research/decision-log.md` 的最新追加条目
 5. 2026-08-24 落地方案和 2026-09-07 方向评估，仅作历史追溯
+
+日期文档是不可变快照。新定位必须创建新的日期文件，再更新 `state.json` 的当前入口；不得为了“更新当前内容”直接改写旧日期文件。
 
 ## 已完成的里程碑
 
@@ -34,6 +36,7 @@
 - 2026-08-24：完成本地数据聚合审计；原始学生数据不进入 Git。
 - 2026-09-07：完成最近邻与公开数据元数据复核（`M20260907-001`）；StudyChat/SQKT 的直接重合使简单聊天特征增量主张失效。
 - 2026-09-09：完成讨论归档与定向文献刷新（`M20260909-001`）；研究定位回到 `explore / E0`，无模型结果、无学生数据处理。
+- 2026-09-11：修正状态阶段语义、恢复 2026-09-07 manifest 对应原始字节，并固定日期快照交接规则；无研究内容变化。
 
 ## 当前候选方向与门槛
 
@@ -85,6 +88,6 @@ git status --short --branch
 git pull --ff-only
 ```
 
-然后按 `AGENTS.md` 的必读顺序读取当前文件和 2026-09-09 两份文献材料。任何研究定位变化都必须同时更新当前文献地图、讨论归档、本文件、`research/state.json`、registry，并向 `research/decision-log.md` 追加日期条目。Git 冲突要语义合并，不能用一侧覆盖状态。
+然后按 `AGENTS.md` 的必读顺序读取 `state.json` 当前入口指向的日期文档。任何研究定位变化都必须创建新的日期文档，再同步 `research/state.json`、本文件、registry 和 `research/decision-log.md`；旧日期快照不得改写。Git 冲突要语义合并，不能用一侧覆盖状态。
 
 完整日志、大型结果和私有数据通过 Git 外的合规渠道管理，并用 data manifest/hash 确认版本。

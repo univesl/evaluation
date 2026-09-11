@@ -188,3 +188,9 @@
 - State correction: `research/state.json` now separates `stage: explore` from `experiment_stage: E0`; no model experiment is running or completed.
 - Registry correction: local linkage audit is the next candidate gate; CodeWorkout/TIKTOC baseline is deferred until the reading/novelty gate or a specific falsifiable comparison requires it.
 - Synchronization rule: changes to research positioning must update the current archive/map, `EXPERIMENT.md`, `state.json`, registry and this log together. Git never carries private data; cross-device recovery starts with `git pull --ff-only` and the fixed AGENTS reading order.
+
+## 2026-09-11 — State semantics and immutable dated snapshots
+
+- State semantics: keep `stage: synthesizing` for the research-artifact processing phase, `decision_state: explore` for the unresolved research direction, and `experiment_stage: E0` for the pre-model phase. These dimensions must not be collapsed into one value.
+- Integrity correction: restore the 2026-09-07 direction-review report to the exact bytes referenced by `public-source-review-20260907.json`; historical explanatory text belongs in the round4 README, not inside a hashed snapshot.
+- Handoff rule: dated research documents are immutable snapshots. A new research position creates new dated documents and updates `state.json` current pointers, `EXPERIMENT.md`, registry when needed, and this log. Old manifests and snapshots are not rewritten.
